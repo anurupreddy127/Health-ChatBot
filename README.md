@@ -26,7 +26,9 @@ pip install -r requirements.txt
 ## Usage
 
 To run the chatbot, execute the following command:
+
 For Backend:
 python3 chat_bot.py
+
 For Frontend:
 npm start
