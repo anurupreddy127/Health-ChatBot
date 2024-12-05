@@ -1,38 +1,162 @@
+/* Set background image and its properties */
+body {
+  background-image: url("/Users/anurupreddykoduru/Downloads/healthcare-chatbot-master/bg.jpg");
+  background-size: cover; /* Ensure the image covers the entire page */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  height: 100vh; /* Makes sure the body takes the full height of the viewport */
+  margin: 0; /* Remove default body margin */
+  font-family: Arial, sans-serif; /* Set default font */
+}
+
+/* Main container for the app */
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* To ensure content is vertically centered */
+  color: white; /* Text color to be visible against the background */
+  padding: 20px;
+}
+
+/* Styling for the Name input page */
+.name-page {
+  background-color: rgba(0, 0, 0, 0.458); /* Semi-transparent black overlay */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Limit width for better layout */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name-page h1 {
+  font-size: 3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name-page input {
+  padding: 10px;
+  font-size: 1.2em;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.name-page button {
+  background-color: #007bff;
   color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.name-page button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the Symptoms selection page */
+.symptoms-page {
+  background-color: rgba(0, 0, 0, 0.797); /* Semi-transparent black overlay */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px; /* Limit width for better layout */
+  text-align: center;
+}
+
+.symptoms-page h1 {
+  font-size: 2.5em;
+}
+
+.symptoms-page h2 {
+  font-size: 1.8em;
+  margin-top: 10px;
+}
+
+.symptoms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.symptoms-column {
+  width: 22%; /* Adjust width to allow for 4 columns */
+  max-height: 300px; /* Limit the height for each column */
+  overflow-y: auto; /* Allow scrolling inside columns */
+}
+
+.symptoms-column label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.symptoms-column input {
+  margin-right: 10px;
+}
+
+.divider {
+  height: 100%;
+  width: 1px;
+  background-color: #ffffff; /* White divider between columns */
+  margin: 0 10px;
+}
+
+/* Styling for the submit button */
+button[type="button"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+button[type="button"]:hover {
+  background-color: #218838;
+}
+
+/* Response Box Styling */
+.response-box {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.response-box h3 {
+  font-size: 2em;
+}
+
+.response-box p {
+  font-size: 1.2em;
+}
+
+.response-box h4 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.response-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.response-box li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+/* Add smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
 }
